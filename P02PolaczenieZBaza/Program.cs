@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P02PolaczenieZBaza
+namespace P03AplikacjaOkienkowa
 {
     class Program
     {

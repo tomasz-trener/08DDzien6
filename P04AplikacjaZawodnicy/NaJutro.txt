@@ -1,0 +1,8 @@
+﻿Download SQL Server Management Studio (SSMS)
+https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15
+
+Microsoft® SQL Server® 2019 Express
+https://www.microsoft.com/en-us/download/details.aspx?id=101064
+
+rodzaj autentykacji :  sql server authentitacion  wtedy trzeba podać hasło 
+
