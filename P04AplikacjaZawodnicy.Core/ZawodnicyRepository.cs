@@ -10,12 +10,21 @@ namespace P04AplikacjaZawodnicy.Core
     {
         public void Dodaj(Zawodnik z)
         {
-            throw new NotImplementedException();
+            PolaczenieZBaza pzb = new PolaczenieZBaza();
+            string sql = string.Format("insert into zawodnicy (imie, nazwisko, kraj, data_ur, wzrost,waga) values('{0}', '{1}', '{2}', '{3}', {4}, {5})",
+                z.Imie, z.Nazwisko, z.Kraj, z.DataUrodzenia, z.Wzrost.ToString(), z.Waga.ToString());
+
+            pzb.WykonajPolecenieSQL(sql);
         }
 
         public void Edytuj(Zawodnik z)
         {
-            throw new NotImplementedException();
+            PolaczenieZBaza pzb = new PolaczenieZBaza();
+
+            string sql = string.Format("update zawodnicy set imie='{0}',nazwisko = '{1}',kraj = '{2}',data_ur='{3}',wzrost={4}, waga={5} where id_zawodnika = {6}",
+                z.Imie, z.Nazwisko, z.Kraj, z.DataUrodzenia, z.Wzrost.ToString(), z.Waga.ToString(),z.Id_zawodnika);
+
+            pzb.WykonajPolecenieSQL(sql);
         }
 
         public Zawodnik PodajZawodnika(int id)
@@ -27,7 +36,9 @@ namespace P04AplikacjaZawodnicy.Core
 
         public void Usun(int id)
         {
-            throw new NotImplementedException();
+            PolaczenieZBaza pzb = new PolaczenieZBaza();
+            pzb.WykonajPolecenieSQL("delete zawodnicy where id_zawodnika = " + id);
+            
         }
 
         public Zawodnik[] WygenerujZawodnikow()

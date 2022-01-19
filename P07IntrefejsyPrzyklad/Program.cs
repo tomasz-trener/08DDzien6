@@ -17,7 +17,7 @@ namespace P07IntrefejsyPrzyklad
             double wynik= so.WykonajOperacje(2, 3, new SystemOdejmowania());
 
 
-
+            // 13:15
         }
     }
 }

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06Intrefejsy", "P6Intrefej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07IntrefejsyPrzyklad", "P07IntrefejsyPrzyklad\P07IntrefejsyPrzyklad.csproj", "{C20BD512-80D8-4E31-86BC-26D7B5B27384}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P08InterfejsyWbudowane", "P08InterfejsyWbudowane\P08InterfejsyWbudowane.csproj", "{163D8F7E-64B5-40C6-8AAD-2957AA8B7279}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163D8F7E-64B5-40C6-8AAD-2957AA8B7279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163D8F7E-64B5-40C6-8AAD-2957AA8B7279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163D8F7E-64B5-40C6-8AAD-2957AA8B7279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163D8F7E-64B5-40C6-8AAD-2957AA8B7279}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

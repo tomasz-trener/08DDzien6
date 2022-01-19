@@ -61,7 +61,7 @@ namespace P04AplikacjaZawodnicy
             {
                 MessageBox.Show(ex.Message, "Błąd aplikacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show("Bład wczytywania danych", "Błąd aplikacji", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
