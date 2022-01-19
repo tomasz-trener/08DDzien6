@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05DygresjaWartosciDomyslne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaZawodnicy.Core.Test", "P04AplikacjaZawodnicy.Core.Test\P04AplikacjaZawodnicy.Core.Test.csproj", "{B206756F-489F-48AC-8A2A-0493DECFB31E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06Intrefejsy", "P6Intrefejsy\P06Intrefejsy.csproj", "{0180D7D1-A680-4AE4-9FB6-DD63FBD44C6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P07IntrefejsyPrzyklad", "P07IntrefejsyPrzyklad\P07IntrefejsyPrzyklad.csproj", "{C20BD512-80D8-4E31-86BC-26D7B5B27384}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0180D7D1-A680-4AE4-9FB6-DD63FBD44C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0180D7D1-A680-4AE4-9FB6-DD63FBD44C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0180D7D1-A680-4AE4-9FB6-DD63FBD44C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0180D7D1-A680-4AE4-9FB6-DD63FBD44C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20BD512-80D8-4E31-86BC-26D7B5B27384}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
