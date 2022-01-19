@@ -34,7 +34,7 @@ namespace P04AplikacjaZawodnicy.Core
             this.sciezka = sciezka;
         }
 
-        public Zawodnik[] WygenerujZawodnikow(string[] kolumny)
+        public Zawodnik[] WygenerujZawodnikow()
         {
             string dane;
             try
@@ -65,7 +65,7 @@ namespace P04AplikacjaZawodnicy.Core
             {
                 string[] komorki = wiersze[i].Split(';');
 
-                Zawodnik z = new Zawodnik(kolumny);
+                Zawodnik z = new Zawodnik();
 
                 try
                 {

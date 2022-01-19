@@ -17,7 +17,7 @@ namespace P04AplikacjaZawodnicy.Core
         public DateTime DataUrodzenia; // domyslna wartośc Datetime = /1.1.0001
         public int Wzrost;
         public int Waga;
-        private string[] kolumny;
+        public static string[] KolumnyZWidoku;
 
         public static Kolumna[] Kolumny
         {
@@ -40,17 +40,17 @@ namespace P04AplikacjaZawodnicy.Core
             get
             {
                 string s = "";
-                if (kolumny.Contains("Imie"))
+                if (KolumnyZWidoku.Contains("Imie"))
                     s += Imie + " ";
-                if (kolumny.Contains("Nazwisko"))
+                if (KolumnyZWidoku.Contains("Nazwisko"))
                     s += Nazwisko + " ";
-                if (kolumny.Contains("Kraj"))
+                if (KolumnyZWidoku.Contains("Kraj"))
                     s += Kraj + " ";
-                if (kolumny.Contains("DataUrodzenia"))
+                if (KolumnyZWidoku.Contains("DataUrodzenia"))
                     s += DataUrodzenia + " ";
-                if (kolumny.Contains("Wzrost"))
+                if (KolumnyZWidoku.Contains("Wzrost"))
                     s += Wzrost + " ";
-                if (kolumny.Contains("Waga"))
+                if (KolumnyZWidoku.Contains("Waga"))
                     s += Waga + " ";
 
                 return s;
@@ -78,10 +78,7 @@ namespace P04AplikacjaZawodnicy.Core
         {
 
         }
-        public Zawodnik(string[] kolumny)
-        {
-            this.kolumny = kolumny;
-        }
+ 
 
         public Zawodnik(string imie, string nazwisko)
         {

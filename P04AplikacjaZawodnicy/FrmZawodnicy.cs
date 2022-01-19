@@ -42,10 +42,12 @@ namespace P04AplikacjaZawodnicy
             foreach (var k in clbKolumny.CheckedItems)
                 kolumny.Add(k.ToString());
 
+            Zawodnik.KolumnyZWidoku = kolumny.ToArray();
+
             Zawodnik[] zawodnicy = null;
             try
             {
-                zawodnicy = mz.WygenerujZawodnikow(kolumny.ToArray());
+                zawodnicy = mz.WygenerujZawodnikow();
             }
             catch (NiepoprawnaSciezkaException ex)
             {

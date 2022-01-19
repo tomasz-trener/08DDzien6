@@ -6,12 +6,13 @@ namespace P04AplikacjaZawodnicy.Core.Test
     [TestClass]
     public class ZawodnicyRepositoryTest
     {
+        //11:20
         [TestMethod]
         public void Scenariusz1()
         {
             ZawodnicyRepository zr = new ZawodnicyRepository();
 
-            Zawodnik[] zawodnicy=  zr.WygenerujZawodnikow(null);
+            Zawodnik[] zawodnicy=  zr.WygenerujZawodnikow();
 
             Assert.AreEqual("Marcin", zawodnicy[0].Imie);
             Assert.AreEqual("KIURU", zawodnicy[8].Nazwisko);
@@ -23,7 +24,7 @@ namespace P04AplikacjaZawodnicy.Core.Test
         {
             ZawodnicyRepository zr = new ZawodnicyRepository();
 
-            Zawodnik[] zawodnicy = zr.WygenerujZawodnikow(new string[] { "Imie", "Nazwisko" });
+            Zawodnik[] zawodnicy = zr.WygenerujZawodnikow();
 
             Assert.AreEqual("Marcin2", zawodnicy[0].Imie);
             Assert.AreEqual("KIURU", zawodnicy[8].Nazwisko);

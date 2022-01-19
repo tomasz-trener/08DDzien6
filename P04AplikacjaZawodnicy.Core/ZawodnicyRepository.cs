@@ -30,7 +30,7 @@ namespace P04AplikacjaZawodnicy.Core
             throw new NotImplementedException();
         }
 
-        public Zawodnik[] WygenerujZawodnikow(string[] kolumny)
+        public Zawodnik[] WygenerujZawodnikow()
         {
             PolaczenieZBaza pzb = new PolaczenieZBaza();
             object[][] wynik = pzb.WykonajPolecenieSQL("SELECT id_zawodnika, id_trenera,imie,nazwisko,kraj,data_ur,wzrost,waga from zawodnicy");
