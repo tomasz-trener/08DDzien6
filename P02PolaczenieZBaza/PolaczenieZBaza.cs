@@ -50,13 +50,24 @@ namespace P02PolaczenieZBaza
 
             int liczbaKolumn = dataReader.FieldCount;
 
+            // zadanie: 
+            //wygeneruj tablicę tablic przechodzac wiersz po wierszu, kolumna po kolumnie
+            // tak aby wyniki byly przechowwane w tablicy tablic typu object 
+
+            List<object[]> listaWierszy = new List<object[]>();
+
             while (dataReader.Read()) // czyta kolejny wiersz
             {
-                string wynik = (string)dataReader.GetValue(2) + (string)dataReader.GetValue(3);
-                Console.WriteLine(wynik);
+                object[] komorki = new object[liczbaKolumn];
+                for (int i = 0; i < liczbaKolumn; i++)
+                    komorki[i] = dataReader.GetValue(i);
+
+                listaWierszy.Add(komorki);
             }
 
             connection.Close();
+
+            return listaWierszy.ToArray();
         }
 
 
