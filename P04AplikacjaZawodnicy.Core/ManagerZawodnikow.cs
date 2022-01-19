@@ -16,7 +16,7 @@ namespace P04AplikacjaZawodnicy.Core
         Lokalne
     }
 
-    public class ManagerZawodnikow
+    public class ManagerZawodnikow : IDostepDoDanych
     {
         string sciezka = "http://tomaszles.pl/wp-content/uploads/2019/06/zawodnicy.txt";
         RodzajImportu rodzajImportu;

@@ -44,9 +44,12 @@
     <Compile Include="Errors\NiepoprawnaSciezkaException.cs" />
     <Compile Include="Errors\ZleSformatowaneDaneException.cs" />
     <Compile Include="GrupaKraj.cs" />
+    <Compile Include="IDostepDoDanych.cs" />
     <Compile Include="Kolumna.cs" />
     <Compile Include="ManagerZawodnikow.cs" />
+    <Compile Include="PolaczenieZBaza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZawodnicyRepository.cs" />
     <Compile Include="Zawodnik.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
