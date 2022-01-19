@@ -30,7 +30,6 @@ namespace P04AplikacjaZawodnicy
         private void InitializeComponent()
         {
             this.txtSciezka = new System.Windows.Forms.TextBox();
-            this.chLoklnie = new System.Windows.Forms.CheckBox();
             this.btnWczytaj = new System.Windows.Forms.Button();
             this.lbDane = new System.Windows.Forms.ListBox();
             this.btnUstawSciezke = new System.Windows.Forms.Button();
@@ -41,27 +40,16 @@ namespace P04AplikacjaZawodnicy
             this.btnEdytuj = new System.Windows.Forms.Button();
             this.btnNowy = new System.Windows.Forms.Button();
             this.ofdOtwiwarciePliku = new System.Windows.Forms.OpenFileDialog();
+            this.cbRodzajPracy = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSciezka
             // 
-            this.txtSciezka.Location = new System.Drawing.Point(167, 7);
+            this.txtSciezka.Location = new System.Drawing.Point(216, 7);
             this.txtSciezka.Name = "txtSciezka";
-            this.txtSciezka.Size = new System.Drawing.Size(179, 20);
+            this.txtSciezka.Size = new System.Drawing.Size(130, 20);
             this.txtSciezka.TabIndex = 22;
-            // 
-            // chLoklnie
-            // 
-            this.chLoklnie.AutoSize = true;
-            this.chLoklnie.Checked = true;
-            this.chLoklnie.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chLoklnie.Location = new System.Drawing.Point(94, 10);
-            this.chLoklnie.Name = "chLoklnie";
-            this.chLoklnie.Size = new System.Drawing.Size(66, 17);
-            this.chLoklnie.TabIndex = 21;
-            this.chLoklnie.Text = "Lokalnie";
-            this.chLoklnie.UseVisualStyleBackColor = true;
             // 
             // btnWczytaj
             // 
@@ -156,15 +144,27 @@ namespace P04AplikacjaZawodnicy
             // 
             this.ofdOtwiwarciePliku.FileName = "openFileDialog1";
             // 
+            // cbRodzajPracy
+            // 
+            this.cbRodzajPracy.FormattingEnabled = true;
+            this.cbRodzajPracy.Items.AddRange(new object[] {
+            "Plik lokalny",
+            "Plik zdalny (tylko do odczytu)",
+            "Baza danych"});
+            this.cbRodzajPracy.Location = new System.Drawing.Point(94, 5);
+            this.cbRodzajPracy.Name = "cbRodzajPracy";
+            this.cbRodzajPracy.Size = new System.Drawing.Size(116, 21);
+            this.cbRodzajPracy.TabIndex = 25;
+            // 
             // FrmZawodnicy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(471, 290);
+            this.Controls.Add(this.cbRodzajPracy);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUstawSciezke);
             this.Controls.Add(this.txtSciezka);
-            this.Controls.Add(this.chLoklnie);
             this.Controls.Add(this.btnWczytaj);
             this.Controls.Add(this.lbDane);
             this.Name = "FrmZawodnicy";
@@ -178,7 +178,6 @@ namespace P04AplikacjaZawodnicy
         #endregion
 
         private System.Windows.Forms.TextBox txtSciezka;
-        private System.Windows.Forms.CheckBox chLoklnie;
         private System.Windows.Forms.Button btnWczytaj;
         private System.Windows.Forms.ListBox lbDane;
         private System.Windows.Forms.Button btnUstawSciezke;
@@ -189,6 +188,7 @@ namespace P04AplikacjaZawodnicy
         private System.Windows.Forms.Button btnEdytuj;
         private System.Windows.Forms.Button btnNowy;
         private System.Windows.Forms.OpenFileDialog ofdOtwiwarciePliku;
+        private System.Windows.Forms.ComboBox cbRodzajPracy;
     }
 }
 

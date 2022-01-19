@@ -16,7 +16,7 @@ namespace P04AplikacjaZawodnicy
 {
     public partial class FrmZawodnicy : Form
     {
-        ManagerZawodnikow mz;
+        IDostepDoDanych iDostepDoDanych;
         public FrmZawodnicy()
         {
             InitializeComponent();
@@ -27,12 +27,16 @@ namespace P04AplikacjaZawodnicy
 
         private void btnWczytaj_Click(object sender, EventArgs e)
         {
-            if (chLoklnie.Checked)
-                mz = new ManagerZawodnikow(txtSciezka.Text, RodzajImportu.Lokalne);
+            if (cbRodzajPracy.SelectedItem.ToString() == "Plik lokalny")
+                iDostepDoDanych = new ManagerZawodnikow(txtSciezka.Text, RodzajImportu.Lokalne);
+            else if (cbRodzajPracy.SelectedItem.ToString() == "Plik zdalny (tylko do odczytu)")
+                iDostepDoDanych = new ManagerZawodnikow();
+            else if (cbRodzajPracy.SelectedItem.ToString() == "Baza danych")
+                iDostepDoDanych = new ZawodnicyRepository();
             else
-                mz = new ManagerZawodnikow();
+                throw new Exception("Nieznany tryb importu");
 
-            Odswiez();
+                Odswiez();
         }
 
         public void Odswiez() // ponownie pobiera zawodnikow z pliku 
@@ -47,7 +51,7 @@ namespace P04AplikacjaZawodnicy
             Zawodnik[] zawodnicy = null;
             try
             {
-                zawodnicy = mz.WygenerujZawodnikow();
+                zawodnicy = iDostepDoDanych.WygenerujZawodnikow();
             }
             catch (NiepoprawnaSciezkaException ex)
             {
@@ -86,21 +90,21 @@ namespace P04AplikacjaZawodnicy
 
         private void btnNowy_Click(object sender, EventArgs e)
         {
-            FrmSzczegoly fs = new FrmSzczegoly(mz,this,TrybOkienka.Nowy);  
+            FrmSzczegoly fs = new FrmSzczegoly(iDostepDoDanych, this, TrybOkienka.Nowy);
             fs.Show(this);
         }
 
         private void btnEdytuj_Click(object sender, EventArgs e)
         {
             Zawodnik s = (Zawodnik)lbDane.SelectedItem;
-            FrmSzczegoly fs = new FrmSzczegoly(mz, this, TrybOkienka.Edycja,s);
+            FrmSzczegoly fs = new FrmSzczegoly(iDostepDoDanych, this, TrybOkienka.Edycja, s);
             fs.Show(this);
         }
 
         private void btnUsun_Click(object sender, EventArgs e)
         {
             Zawodnik s = (Zawodnik)lbDane.SelectedItem;
-            mz.Usun(s.Id_zawodnika);
+            iDostepDoDanych.Usun(s.Id_zawodnika);
             Odswiez();
         }
     }

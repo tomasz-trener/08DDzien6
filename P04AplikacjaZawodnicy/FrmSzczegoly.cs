@@ -22,20 +22,20 @@ namespace P04AplikacjaZawodnicy
 
     public partial class FrmSzczegoly : Form
     {
-        ManagerZawodnikow mz;
+        IDostepDoDanych iDostepDoDanych;
         FrmZawodnicy frmZawodnicy;
         TrybOkienka trybOkienka;
         Zawodnik zawodnik;
 
-        public FrmSzczegoly(ManagerZawodnikow mz, FrmZawodnicy frmZawodnicy, TrybOkienka trybOkienka)
+        public FrmSzczegoly(IDostepDoDanych mz, FrmZawodnicy frmZawodnicy, TrybOkienka trybOkienka)
         {
             InitializeComponent();
-            this.mz = mz;
+            this.iDostepDoDanych = mz;
             this.frmZawodnicy = frmZawodnicy;
             this.trybOkienka = trybOkienka;
            
         }
-        public FrmSzczegoly(ManagerZawodnikow mz, FrmZawodnicy frmZawodnicy, TrybOkienka trybOkienka, Zawodnik zawodnik): this(mz,frmZawodnicy,trybOkienka)
+        public FrmSzczegoly(IDostepDoDanych mz, FrmZawodnicy frmZawodnicy, TrybOkienka trybOkienka, Zawodnik zawodnik): this(mz,frmZawodnicy,trybOkienka)
         {
             this.zawodnik = zawodnik;
 
@@ -55,13 +55,13 @@ namespace P04AplikacjaZawodnicy
             {
                 z = new Zawodnik();
                 zczytajTextobxy(z);
-                mz.Dodaj(z);
+                iDostepDoDanych.Dodaj(z);
             }  
             else if (trybOkienka == TrybOkienka.Edycja)
             {
                 z = zawodnik;
                 zczytajTextobxy(z);
-                mz.Edytuj(z);
+                iDostepDoDanych.Edytuj(z);
             }
                
             else

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace P04AplikacjaZawodnicy.Core
 {
     // intrefejs to tylko zestawienie sygnatur metod, które koniecznie mają być zaimplementowane przez naszą klasę 
-    interface IDostepDoDanych
+    public interface IDostepDoDanych
     {
         Zawodnik[] WygenerujZawodnikow();
         void Dodaj(Zawodnik z);
