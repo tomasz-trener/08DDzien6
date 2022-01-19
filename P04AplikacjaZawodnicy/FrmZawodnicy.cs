@@ -39,7 +39,7 @@ namespace P04AplikacjaZawodnicy
                 Odswiez();
         }
 
-        public void Odswiez() // ponownie pobiera zawodnikow z pliku 
+        public void Odswiez(string kolumna = null) // ponownie pobiera zawodnikow z pliku 
         {
             List<string> kolumny = new List<string>();
 
@@ -51,7 +51,10 @@ namespace P04AplikacjaZawodnicy
             Zawodnik[] zawodnicy = null;
             try
             {
-                zawodnicy = iDostepDoDanych.WygenerujZawodnikow();
+                if(kolumna == null)
+                    zawodnicy = iDostepDoDanych.WygenerujZawodnikow();
+                else
+                    zawodnicy = iDostepDoDanych.WygenerujZawodnikow(kolumna);
             }
             catch (NiepoprawnaSciezkaException ex)
             {
@@ -106,6 +109,12 @@ namespace P04AplikacjaZawodnicy
             Zawodnik s = (Zawodnik)lbDane.SelectedItem;
             iDostepDoDanych.Usun(s.Id_zawodnika);
             Odswiez();
+        }
+
+        private void btnOpcje_Click(object sender, EventArgs e)
+        {
+            FrmOpcje fo = new FrmOpcje(this);
+            fo.Show();
         }
     }
 }

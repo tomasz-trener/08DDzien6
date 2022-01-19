@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace P04AplikacjaZawodnicy.Core
 {
 
-    public class Zawodnik
+    public class Zawodnik : IComparable
     {
         public int Id_zawodnika; // domyślna wartośc int =0
         public int Id_trenera;
@@ -18,7 +18,7 @@ namespace P04AplikacjaZawodnicy.Core
         public int Wzrost;
         public int Waga;
         public static string[] KolumnyZWidoku;
-
+        public static string DomysleSortowanie;
         public static Kolumna[] Kolumny
         {
             get
@@ -89,6 +89,29 @@ namespace P04AplikacjaZawodnicy.Core
         public string PrzedstawSie()
         {
             return $"Nazywam się {Imie} {Nazwisko} i pochodzę z {Kraj}";
+        }
+
+        public int CompareTo(object obj)
+        {
+            Zawodnik inny = (Zawodnik)obj;
+            if (DomysleSortowanie == "id_zawodnika")
+                return Id_zawodnika = inny.Id_zawodnika;
+            if (DomysleSortowanie == "id_trenera")
+                return Id_trenera = inny.Id_trenera;
+            if (DomysleSortowanie == "imie")
+                return Imie.CompareTo(inny.Imie);
+            if (DomysleSortowanie == "nazwisko")
+                return Nazwisko.CompareTo(inny.Nazwisko);
+            if (DomysleSortowanie == "kraj")
+                return Kraj.CompareTo(inny.Kraj);
+            if (DomysleSortowanie == "data_ur")
+                return DataUrodzenia.CompareTo(inny.DataUrodzenia);
+            if (DomysleSortowanie == "wzrost")
+                return Wzrost - inny.Wzrost;
+            if (DomysleSortowanie == "waga")
+                return Waga = inny.Waga;
+
+            return 0;
         }
     }
 }

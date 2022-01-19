@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmOpcje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpcje.Designer.cs">
+      <DependentUpon>FrmOpcje.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSzczegoly.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmOpcje.resx">
+      <DependentUpon>FrmOpcje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSzczegoly.resx">
       <DependentUpon>FrmSzczegoly.cs</DependentUpon>
     </EmbeddedResource>

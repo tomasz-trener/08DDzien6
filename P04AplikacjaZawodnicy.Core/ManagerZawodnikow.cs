@@ -252,7 +252,13 @@ namespace P04AplikacjaZawodnicy.Core
             return s / wartosci.Length;
         }
 
-        
-
+        public Zawodnik[] WygenerujZawodnikow(string nazwaKolumnySortowanie)
+        {
+            WygenerujZawodnikow();
+            Zawodnik[] zawodnicy = this.zawodnicy.ToArray();
+            Zawodnik.DomysleSortowanie = nazwaKolumnySortowanie;
+            Array.Sort(zawodnicy);
+            return zawodnicy;
+        }
     }
 }

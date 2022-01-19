@@ -35,7 +35,7 @@ namespace P04AplikacjaZawodnicy
             this.btnUstawSciezke = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.clbKolumny = new System.Windows.Forms.CheckedListBox();
-            this.btnCzysc = new System.Windows.Forms.Button();
+            this.btnOpcje = new System.Windows.Forms.Button();
             this.btnUsun = new System.Windows.Forms.Button();
             this.btnEdytuj = new System.Windows.Forms.Button();
             this.btnNowy = new System.Windows.Forms.Button();
@@ -82,7 +82,7 @@ namespace P04AplikacjaZawodnicy
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.clbKolumny);
-            this.groupBox1.Controls.Add(this.btnCzysc);
+            this.groupBox1.Controls.Add(this.btnOpcje);
             this.groupBox1.Controls.Add(this.btnUsun);
             this.groupBox1.Controls.Add(this.btnEdytuj);
             this.groupBox1.Controls.Add(this.btnNowy);
@@ -101,14 +101,15 @@ namespace P04AplikacjaZawodnicy
             this.clbKolumny.Size = new System.Drawing.Size(86, 79);
             this.clbKolumny.TabIndex = 4;
             // 
-            // btnCzysc
+            // btnOpcje
             // 
-            this.btnCzysc.Location = new System.Drawing.Point(6, 118);
-            this.btnCzysc.Name = "btnCzysc";
-            this.btnCzysc.Size = new System.Drawing.Size(75, 23);
-            this.btnCzysc.TabIndex = 3;
-            this.btnCzysc.Text = "Czyść";
-            this.btnCzysc.UseVisualStyleBackColor = true;
+            this.btnOpcje.Location = new System.Drawing.Point(6, 118);
+            this.btnOpcje.Name = "btnOpcje";
+            this.btnOpcje.Size = new System.Drawing.Size(75, 23);
+            this.btnOpcje.TabIndex = 3;
+            this.btnOpcje.Text = "Opcje";
+            this.btnOpcje.UseVisualStyleBackColor = true;
+            this.btnOpcje.Click += new System.EventHandler(this.btnOpcje_Click);
             // 
             // btnUsun
             // 
@@ -151,7 +152,7 @@ namespace P04AplikacjaZawodnicy
             "Plik lokalny",
             "Plik zdalny (tylko do odczytu)",
             "Baza danych"});
-            this.cbRodzajPracy.Location = new System.Drawing.Point(94, 5);
+            this.cbRodzajPracy.Location = new System.Drawing.Point(94, 6);
             this.cbRodzajPracy.Name = "cbRodzajPracy";
             this.cbRodzajPracy.Size = new System.Drawing.Size(116, 21);
             this.cbRodzajPracy.TabIndex = 25;
@@ -183,7 +184,7 @@ namespace P04AplikacjaZawodnicy
         private System.Windows.Forms.Button btnUstawSciezke;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckedListBox clbKolumny;
-        private System.Windows.Forms.Button btnCzysc;
+        private System.Windows.Forms.Button btnOpcje;
         private System.Windows.Forms.Button btnUsun;
         private System.Windows.Forms.Button btnEdytuj;
         private System.Windows.Forms.Button btnNowy;

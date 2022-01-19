@@ -47,6 +47,14 @@ namespace P04AplikacjaZawodnicy.Core
             object[][] wynik = pzb.WykonajPolecenieSQL("SELECT id_zawodnika, id_trenera,imie,nazwisko,kraj,data_ur,wzrost,waga from zawodnicy");
             return MapujZawodnik(wynik);
         }
+
+        public Zawodnik[] WygenerujZawodnikow(string nazwaKolumnySortowanie)
+        {
+            PolaczenieZBaza pzb = new PolaczenieZBaza();
+            object[][] wynik = pzb.WykonajPolecenieSQL("SELECT id_zawodnika, id_trenera,imie,nazwisko,kraj,data_ur,wzrost,waga from zawodnicy order by " + nazwaKolumnySortowanie);
+            return MapujZawodnik(wynik);
+        }
+
         private Zawodnik[] MapujZawodnik(object[][] wynik)
         {
             Zawodnik[] zawodnicy = new Zawodnik[wynik.Length];

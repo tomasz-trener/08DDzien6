@@ -10,6 +10,8 @@ namespace P04AplikacjaZawodnicy.Core
     public interface IDostepDoDanych
     {
         Zawodnik[] WygenerujZawodnikow();
+
+        Zawodnik[] WygenerujZawodnikow(string nazwaKolumnySortowanie);
         void Dodaj(Zawodnik z);
         void Edytuj(Zawodnik z);
         void Usun(int id);

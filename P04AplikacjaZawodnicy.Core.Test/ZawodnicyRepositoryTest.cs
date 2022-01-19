@@ -26,7 +26,7 @@ namespace P04AplikacjaZawodnicy.Core.Test
 
             Zawodnik[] zawodnicy = zr.WygenerujZawodnikow();
 
-            Assert.AreEqual("Marcin2", zawodnicy[0].Imie);
+            Assert.AreEqual("Marcin", zawodnicy[0].Imie);
             Assert.AreEqual("KIURU", zawodnicy[8].Nazwisko);
             Assert.AreEqual(zawodnicy.Length, 17);
         }
