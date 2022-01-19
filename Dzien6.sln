@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaZawodnicy", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaZawodnicy.Core", "P04AplikacjaZawodnicy.Core\P04AplikacjaZawodnicy.Core.csproj", "{8967908B-176C-493F-B7D4-B8459AB441FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05DygresjaWartosciDomyslne", "P05DygresjaWartosciDomyslne\P05DygresjaWartosciDomyslne.csproj", "{98B3754E-C0CB-4B89-95B0-F19B4C6B92E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04AplikacjaZawodnicy.Core.Test", "P04AplikacjaZawodnicy.Core.Test\P04AplikacjaZawodnicy.Core.Test.csproj", "{B206756F-489F-48AC-8A2A-0493DECFB31E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{8967908B-176C-493F-B7D4-B8459AB441FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8967908B-176C-493F-B7D4-B8459AB441FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8967908B-176C-493F-B7D4-B8459AB441FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98B3754E-C0CB-4B89-95B0-F19B4C6B92E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98B3754E-C0CB-4B89-95B0-F19B4C6B92E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98B3754E-C0CB-4B89-95B0-F19B4C6B92E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98B3754E-C0CB-4B89-95B0-F19B4C6B92E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B206756F-489F-48AC-8A2A-0493DECFB31E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

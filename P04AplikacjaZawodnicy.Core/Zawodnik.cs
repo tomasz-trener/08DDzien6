@@ -9,12 +9,12 @@ namespace P04AplikacjaZawodnicy.Core
 
     public class Zawodnik
     {
-        public int Id_zawodnika;
+        public int Id_zawodnika; // domyślna wartośc int =0
         public int Id_trenera;
-        public string Imie;
+        public string Imie; // domyslna wartosc string =null
         public string Nazwisko { get; set; }
         public string Kraj;
-        public DateTime DataUrodzenia;
+        public DateTime DataUrodzenia; // domyslna wartośc Datetime = /1.1.0001
         public int Wzrost;
         public int Waga;
         private string[] kolumny;
